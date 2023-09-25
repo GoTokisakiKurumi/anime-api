@@ -25,15 +25,13 @@ const fetchAnimeListData = async ({ url, params }) =>
       const status = $(element).find('div.status').text()
       const episod = $(element).find('div.bt').find('span.epx').text()
       const type = $(element).find('div.typez').text()
-      const url = $(element).find('a').attr('href')
-     
+
       result.push({
         image: image.attr('data-src') ?? image.attr('src'),
         title,
         slug: slug[slug.length -2 ],
         status: status ? status : episod,
-        type,
-        url
+        type
       })
     })
       
@@ -67,9 +65,8 @@ const fetchAnimeListModeData = async () =>
       const listAnime = $(element).find('ul li').map((i, el) => {
         const title = $(el).text()
         const slug = $(el).find('a').attr('href').split('/')
-        const url =$(el).find('a').attr('href')
 
-        return { title, slug: slug[slug.length - 2], url }
+        return { title, slug: slug[slug.length - 2] }
       }).get()
 
       result.push({
@@ -179,7 +176,6 @@ const fetchAnimeUpdateData = async (number = 1) =>
       const type = $(element).find('.bt').find('.type').text()
       const information = $(element).find('.sosev span:last-child').text()
       const episode = $(element).find('.limit').find('div.epin').text()
-      const url = $(element).find('.main-seven a').attr('href')
 
       result.push({
         image: image.attr('data-src') ?? image.attr('src'),
@@ -188,8 +184,7 @@ const fetchAnimeUpdateData = async (number = 1) =>
         slug: slug[slug.length - 2],
         type,
         information,
-        episode,
-        url
+        episode
       })
     })
 
