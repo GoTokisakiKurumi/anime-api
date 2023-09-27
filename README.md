@@ -39,5 +39,23 @@
   - [Get Anime Upcoming](#get-anime-upcoming)
   - [Get Anime Streaming Url](#get-anime-streaming-url)
 
+## Installation
+
+### Local
+Run the following command to clone the repository, and install the dependencies:
+
+```sh
+git clone https://github.com/LutfiAuliaSidik/anime-api.git
+cd anime-api
+npm install #or yarn install
+
+start the server with the following command:
+
+```sh
+npm start #or yarn start
+```
+Now the server is running on http://localhost:3000
+
+
 
 
