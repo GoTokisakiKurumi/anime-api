@@ -12,6 +12,8 @@
         <a href="https://github.com/LutfiAuliaSidik/anime-api/issues/new?assignees=LutfiAuliaSidik&labels=bug&template=bug-report.yml">Bug report</a>
         ·
         <a href="https://github.com/LutfiAuliaSidik/anime-api/issues/new?assignees=LutfiAuliaSidik&labels=enhancement&template=feature-request.md">Feature request</a>
+    </p>
+    <p align="center">
         <a href="https://github.com/LutfiAuliaSidik/anime-api">
             <img src="https://img.shields.io/github/stars/LutfiAuliaSidik/anime-api" alt="stars">
         </a>
