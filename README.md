@@ -36,7 +36,7 @@
   - [Get Anime Details](#get-anime-details)
   - [Get Anime List Update](#get-anime-list-update)
   - [Get Anime Schedule](#get-anime-schedule)
-  - [Get Anime Upcoming](#get-anime-upcoming)
+  - [Get Anime List Upcoming](#get-anime-list-upcoming)
   - [Get Anime Streaming Url](#get-anime-streaming-url)
 
 ## Installation
@@ -306,7 +306,7 @@ ini akan mengambil daftar episode anime terbaru yang sudah diupdate sesuai jadwa
 
 | Parameter    | Description                                                                                                                               |
 | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `page` (int) | secara default `page` value nya `1` dan ini akan mengahasilkan 50 daftar anime update per `page` nya.<br> Contoh:  `/anime/update?page=2` |
+| `page` (int) | secara default `page` value nya `1` dan ini akan mengahasilkan 15 daftar anime update per `page` nya.<br> Contoh:  `/anime/update?page=2` |
 
 
 ```js
@@ -388,4 +388,39 @@ Hasilnya >>
 ]
 
 ```
+### Get Anime List Upcoming
+
+ini akan mengambil daftar anime yang akan segera dirilis.
+
+
+```js
+async function main () {
+    const response = await fetch('http://localhost:3000/anime/upcoming?page=2')
+    const data = response.json()
+    console.log(data)
+}
+main()
+```
+Hasilnya >>
+
+```json
+[
+  {
+    "image": "https://sokuja.in/wp-content/uploads/2023/07/Saihate_no_Paladin__Tetsusabi_no_Yama_no_Ou-2.jpg",
+    "title": "Saihate no Paladin Tetsusabi no Yama no Ou Subtitle Indonesia",
+    "slug": "saihate-no-paladin-tetsusabi-no-yama-no-ou-subtitle-indonesia",
+    "type": "TV",
+    "status": "Upcoming"
+  },
+  {
+    "image": "https://sokuja.in/wp-content/uploads/2023/07/Sousou_no_Frieren-5.jpg",
+    "title": "Sousou no Frieren Subtitle Indonesia",
+    "slug": "sousou-no-frieren-subtitle-indonesia",
+    "type": "TV",
+    "status": "Upcoming"
+  },
+  {...}
+]
+```
+
 

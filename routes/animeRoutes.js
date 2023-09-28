@@ -24,7 +24,7 @@ router.get('/anime/completed', fetchAnimeCompleted)
 router.get('/anime/detail/:slug', fetchAnimeDetail)
 router.get('/anime/update', fetchAnimeUpdate)
 router.get('/anime/schedule', fetchAnimeSchedule)
-router.get('/anime/upcoming/:number?', fetchAnimeUpcoming)
+router.get('/anime/upcoming', fetchAnimeUpcoming)
 router.get('/anime/video/:slug', fetchVideoPlayer)
 
 export default router

@@ -123,7 +123,6 @@ export const fetchAnimeCompleted = async (req, res) =>
       url: '/anime/',
       params: `?page=${page}&status=completed&order=update`
     })
-    console.log(data.length)
     res.status(200).json(data)
   } catch (error) {
     res.status(500).json(error)
@@ -165,6 +164,7 @@ export const fetchAnimeUpdate = async (req, res) =>
   try {
     const page = req.query.page ?? 1
     const data = await scrapper.fetchAnimeUpdateData(page)
+    console.log(data.length)
     res.status(200).json(data)
   } catch (error) {
     res.status(500).json(error)
@@ -203,8 +203,8 @@ export const fetchAnimeSchedule = async (req, res) =>
 export const fetchAnimeUpcoming = async (req, res) =>
 {
   try {
-    const params = req.params.number
-    const data = await scrapper.fetchAnimeUpcomingData(params)
+    const page = req.query.page ?? 1
+    const data = await scrapper.fetchAnimeUpcomingData(page)
     res.status(200).json(data)
   } catch (error) {
     res.status(500).json(error)
