@@ -17,7 +17,6 @@ const router = express.Router()
 
 router.get('/', home)
 router.get('/anime', fetchAnimeList)
-router.get('/anime/page/:number', fetchAnimeList)
 router.get('/anime/list-mode', fetchAnimeListMode)
 router.get('/anime/movie', fetchAnimeMovie)
 router.get('/anime/ongoing', fetchAnimeOngoing)

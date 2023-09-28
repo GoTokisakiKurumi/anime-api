@@ -23,10 +23,10 @@ export const home = async (req, res) =>
 export const fetchAnimeList = async (req, res) =>
 {
   try {
-    const number = req.params.number ?? 1
+    const params = req.query.page ?? 1
     const data = await scrapper.fetchAnimeListData({
       url: '/anime/',
-      params: `?page=${number}`
+      params: `?page=${params}`
     })
     res.status(200).json(data)
   } catch (error) {

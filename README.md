@@ -4,9 +4,9 @@
     </a>
     <h3 align="center">anime API</h3>
     <p align="center">
-        <samp>A free anime streaming restful API serving anime from <a href="https://sojuka.bar/">Sojuka</a></samp>
+        <samp>rest API streaming anime gratis yang menyajikan anime dari<a href="https://sojuka.bar/">Sojuka</a></samp>
         <br />
-        <a href="#routes"><strong>Explore the api</strong></a>
+        <a href="#routes"><strong>Jelajahi api</strong></a>
         <br />
         <br />
         <a href="https://github.com/LutfiAuliaSidik/anime-api/issues/new?assignees=LutfiAuliaSidik&labels=bug&template=bug-report.yml">Bug report</a>
@@ -42,19 +42,31 @@
 ## Installation
 
 ### Local
-Run the following command to clone the repository, and install the dependencies:
+Jalankan perintah berikut untuk mengkloning repositori, dan menginstal dependensi:
 
 ```sh
 git clone https://github.com/LutfiAuliaSidik/anime-api.git
 cd anime-api
-npm install #or yarn install
+npm install
 
-start the server with the following command:
+mulai server dengan perintah berikut:
 
-
-npm start #or yarn start
+npm start
 ```
-Now the server is running on http://localhost:3000
+Sekarang server sedang berjalan di http://localhost:3000
+
+## Routes
+
+dibawah ini kamu akan menemukan cara penggunaan fetch API
+tetapi kamu dapat menggunakan library lain diluar sana.
+
+### Get Anime List
+
+| Parameter    | Description                                                                                   |
+| ------------ | --------------------------------------------------------------------------------------------- |
+| `page` (int) | secara default `page` value nya `1` dan ini akan mengahasilkan 50 daftar anime per `page` nya |
+
+
 
 
 
