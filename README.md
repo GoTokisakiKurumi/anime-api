@@ -35,7 +35,7 @@
   - [Get Anime List Completed](#get-anime-list-completed)
   - [Get Anime Details](#get-anime-details)
   - [Get Anime List Update](#get-anime-list-update)
-  - [Get Anime Schedule](#get-anime-schdule)
+  - [Get Anime Schedule](#get-anime-schedule)
   - [Get Anime Upcoming](#get-anime-upcoming)
   - [Get Anime Streaming Url](#get-anime-streaming-url)
 
