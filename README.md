@@ -249,4 +249,54 @@ Hasilnya >>
 ]
 
 ```
+### Get Anime Details
 
+ini akan mengambil detail dari anime dengan menggunakan `/anime/:slug`
+
+```js
+async function main () {
+    const response = await fetch('http://localhost:3000/anime/oshi-no-ko-subtitle-indonesia')
+    const data = response.json()
+    console.log(data)
+}
+main()
+```
+Hasilnya >> 
+
+```json
+[
+  {
+    "image": "https://sokuja.in/wp-content/uploads/2023/03/oshi_no_ko-5.jpg",
+    "thumbnail": "https://sokuja.in/wp-content/uploads/2023/03/oshi_no_ko-2.jpg",
+    "title": "“Oshi no Ko” Subtitle Indonesia",
+    "status": " Completed",
+    "genre": [
+      "Drama",
+      "Reincarnation",
+      "Seinen",
+      "Showbiz",
+      "Supernatural"
+    ],
+    "episode": [
+      {
+        "title": "(END) Oshi no Ko Episode 11 Subtitle Indonesia",
+        "slug": "end-oshi-no-ko-episode-11-subtitle-indonesia",
+        "eps": "11",
+        "date": "Juni 28, 2023"
+      },
+      {...}
+    ],
+    "trailer": "https://www.youtube.com/watch?v=1yXa8MAmocQ",
+    "rating": "Rating 8.79",
+    "information": [
+      "Studio: Doga Kobo",
+      "Tanggal Rilis: Apr 12, 2023",
+      "Season: Spring 2023",
+      "Tipe: TV",
+      "Total Episode: 11",
+      "Fansub: SOKUJA.NET",
+      "Director: Hiramaki Daisuke"
+    ]
+  }
+]
+```
