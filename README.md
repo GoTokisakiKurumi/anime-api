@@ -119,7 +119,7 @@ Hasilnya >>
     {
       "title": "Akuyaku Reijou nanode Last Boss wo Kattemimashita Subtitle Indonesia",
       "slug": "akuyaku-reijou-nanode-last-boss-wo-kattemimashita-subtitle-indonesia"
-    }, {...}
+    }
   },
   {
     "initials": "B",
@@ -131,7 +131,7 @@ Hasilnya >>
     {
       "title": "Black Clover Subtitle Indonesia",
       "slug": "black-clover-subtitle-indonesia"
-    }, {...}
+    }
   }, {...}
 ]
 
