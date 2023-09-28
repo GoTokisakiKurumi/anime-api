@@ -89,6 +89,54 @@ Hasilnya >>
 
 ```
 
+### Get Anime List Mode
+
+ini akan mengambil daftar anime berdasarkan inisial huruf dari A sampai Z
+
+```js
+async function main () {
+    const response = await fetch('http://localhost:3000/anime/list-mode')
+    const data = response.json()
+    console.log(data)
+}
+main()
+```
+Hasilnya >>
+
+```json
+[
+  {
+    "initials": "A", 
+    "list_anime": [
+    {
+      "title": "AI no Idenshi Subtitle Indonesia",
+      "slug": "ai-no-idenshi-subtitle-indonesia"
+    },
+    {
+      "title": "Akiba Meido Sensou Subtitle Indonesia",
+      "slug": "akiba-meido-sensou"
+    },
+    {
+      "title": "Akuyaku Reijou nanode Last Boss wo Kattemimashita Subtitle Indonesia",
+      "slug": "akuyaku-reijou-nanode-last-boss-wo-kattemimashita-subtitle-indonesia"
+    }, {...}
+  },
+  {
+    "initials": "B",
+    "list_anime": [
+    {
+      "title": "Benriya Saitou-san, Isekai ni Iku Subtitle Indonesia",
+      "slug": "benriya-saitou-san-isekai-ni-iku-subtitle-indonesia"
+    },
+    {
+      "title": "Black Clover Subtitle Indonesia",
+      "slug": "black-clover-subtitle-indonesia"
+    }, {...}
+  }, {...}
+]
+
+```
+
 
 
 
