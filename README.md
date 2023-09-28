@@ -4,7 +4,7 @@
     </a>
     <h3 align="center">anime API</h3>
     <p align="center">
-        <samp>rest API streaming anime gratis yang menyajikan anime dari<a href="https://sojuka.bar/">Sojuka</a></samp>
+        <samp>rest API streaming anime gratis yang menyajikan anime dari <a href="https://sojuka.bar/">Sojuka</a></samp>
         <br />
         <a href="#routes"><strong>Jelajahi api</strong></a>
         <br />
@@ -66,7 +66,27 @@ tetapi kamu dapat menggunakan library lain diluar sana.
 | ------------ | --------------------------------------------------------------------------------------------------------------------------- |
 | `page` (int) | secara default `page` value nya `1` dan ini akan mengahasilkan 50 daftar anime per `page` nya.<br> Contoh:  `/anime?page=2` |
 
+```js
+async function main () {
+    const response = await fetch('http://localhost:3000/anime?page=2')
+    const data = response.json()
+    console.log(data)
+}
+main()
+```
+Hasilnya >>
 
+```json
+[
+  {
+    image: 'https://sokuja.in/wp-content/uploads/2023/06/Eiyuu_Kyoushitsu-4.jpg',                                         title: 'Eiyuu Kyoushitsu Subtitle Indonesia',
+    slug: 'eiyuu-kyoushitsu-subtitle-indonesia',
+    status: 'Completed',
+    type: 'TV'
+  }, {...}
+]
+
+```
 
 
 
