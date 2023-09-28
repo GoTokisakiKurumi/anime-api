@@ -51,7 +51,7 @@ npm install #or yarn install
 
 start the server with the following command:
 
-```sh
+
 npm start #or yarn start
 ```
 Now the server is running on http://localhost:3000
