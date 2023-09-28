@@ -174,7 +174,7 @@ Hasilnya >>
 ```
 ### Get Anime List Ongoing
 
-ini akan mengambil semua daftar anime ongoing.
+ini akan mengambil semua daftar anime yang status nya ongoing.
 
 Anime `ongoing` mengacu pada seri anime yang masih dalam proses produksi dan penayangan,
 ini berarti bahwa episode-episode baru dari anime tersebut terus dirilis secara berkala,
@@ -207,6 +207,42 @@ Hasilnya >>
     "title": "Helck Subtitle Indonesia",
     "slug": "helck-subtitle-indonesia",
     "status": "Ongoing",
+    "type": "TV"
+  },
+  {...}
+]
+
+```
+### Get Anime List Completed
+
+| Parameter    | Description                                                                                                                                     |
+| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| `page` (int) | secara default `page` value nya `1` dan ini akan mengahasilkan 50 daftar anime completed per `page` nya.<br> Contoh:  `/anime/completed?page=2` |
+
+```js
+async function main () {
+    const response = await fetch('http://localhost:3000/anime/completed?page=2')
+    const data = response.json()
+    console.log(data)
+}
+main()
+```
+Hasilnya >>
+
+```json
+[
+  {
+    "image": "https://sokuja.in/wp-content/uploads/2023/02/konosuba-sidestory.jpg",
+    "title": "Kono Subarashii Sekai ni Bakuen wo! Subtitle Indonesia",
+    "slug": "kono-subarashii-sekai-ni-bakuen-wo-subtitle-indonesia",
+    "status": "Completed",
+    "type": "TV"
+  },
+  {
+    "image": "https://sokuja.in/wp-content/uploads/2023/01/kubo-san_wa_mob_wo_yurusanai-2.jpg",
+    "title": "Kubo-san wa Mob wo Yurusanai Subtitle Indonesia",
+    "slug": "kubo-san-wa-mob-wo-yurusanai-subtitle-indonesia",
+    "status": "Completed",
     "type": "TV"
   },
   {...}
