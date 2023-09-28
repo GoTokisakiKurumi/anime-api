@@ -91,7 +91,7 @@ Hasilnya >>
 
 ### Get Anime List Mode
 
-ini akan mengambil daftar anime berdasarkan inisial huruf dari A sampai Z.
+route ini akan mengambil daftar anime berdasarkan inisial huruf dari A sampai Z.
 
 ```js
 async function main () {
@@ -140,7 +140,7 @@ Hasilnya >>
 ```
 ### Get Anime List Movies
 
-ini akan mengambil semua daftar anime movie.
+route ini akan mengambil semua daftar anime movie.
 
 ```js
 async function main () {
@@ -174,7 +174,7 @@ Hasilnya >>
 ```
 ### Get Anime List Ongoing
 
-ini akan mengambil semua daftar anime yang status nya ongoing.
+route ini akan mengambil semua daftar anime yang status nya ongoing.
 
 Anime `ongoing` mengacu pada seri anime yang masih dalam proses produksi dan penayangan,
 ini berarti bahwa episode-episode baru dari anime tersebut terus dirilis secara berkala,
@@ -251,7 +251,7 @@ Hasilnya >>
 ```
 ### Get Anime Details
 
-ini akan mengambil detail dari anime dengan menggunakan `/anime/detail/:slug`.
+route ini akan mengambil detail dari anime dengan menggunakan `/anime/detail/:slug`.
 
 ```js
 async function main () {
@@ -302,7 +302,7 @@ Hasilnya >>
 ```
 ### Get Anime List Update
 
-ini akan mengambil daftar episode anime terbaru yang sudah diupdate sesuai jadwal yang sudah ditentukan.
+route ini akan mengambil daftar episode anime terbaru yang sudah diupdate sesuai jadwal yang sudah ditentukan.
 
 | Parameter    | Description                                                                                                                               |
 | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
@@ -345,7 +345,7 @@ Hasilnya >>
 ```
 ### Get Anime Schedule
 
-ini akan mengambil daftar jadwal rilis anime episode terbaru.
+route ini akan mengambil daftar jadwal rilis anime episode terbaru.
 
 ```js
 async function main () {
@@ -390,7 +390,7 @@ Hasilnya >>
 ```
 ### Get Anime List Upcoming
 
-ini akan mengambil daftar anime yang akan segera dirilis.
+route ini akan mengambil daftar anime yang akan segera dirilis.
 
 
 ```js
@@ -422,5 +422,27 @@ Hasilnya >>
   {...}
 ]
 ```
+### Get Anime Streaming Url
+
+route ini akan mengambil url video streaming berdasarkan `slug`, tapi perlu diingat `slug` disini yaitu `slug` yang bisa kamu dapatkan 
+diroute <p href="#get-anime-details">detail</p> atau kamu bisa menyebutnya sebagai `slug episode`<br>
+
+```js
+async function main () {
+    const response = await fetch('http://localhost:3000/anime/video/ai-no-idenshi-episode-11-subtitle-indonesia')
+    const data = response.json()
+    console.log(data)
+}
+main()
+```
+Hasilnya >>
+
+```json
+{
+  "url": "https://videos.files.wordpress.com/5FoBRARw/sokuja.net-ani.11-480p.mp4"
+}
+
+```
+
 
 

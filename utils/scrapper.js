@@ -303,9 +303,11 @@ const fetchVideoPlayerData = async (slug) =>
     const html = await axios.get(config.BASE_URL + '/' + slug)
     const $ = cheerio.load(html.data)
 
-    const url = $('.player-embed').find('video source').attr('src')
-
-    return { url }
+    const url = $('.player-embed').find('video source')
+    
+    return { 
+      url: url.attr('data-src') ?? url.attr('src') 
+    }
 
   } catch (error) {
     throw {
