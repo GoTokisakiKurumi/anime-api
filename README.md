@@ -138,7 +138,38 @@ Hasilnya >>
 ]
 
 ```
+### Get Anime List Movies
 
+ini akan mengambil semua daftar anime movie
 
+```js
+async function main () {
+    const response = await fetch('http://localhost:3000/anime/movie')
+    const data = response.json()
+    console.log(data)
+}
+main()
+```
+Hasilnya >>
 
+```json
+[
+  {
+    "image": "https://sokuja.in/wp-content/uploads/2022/11/one.piece_.red_.film_.jpg",
+    "title": "One Piece Film: Red Subtitle Indonesia",
+    "slug": "one-piece-film-red-subtitle-indonesia",
+    "status": "Completed",
+    "type": "Movie"
+  },
+  {
+    "image": "https://sokuja.in/wp-content/uploads/2023/07/Suzume_no_Tojimari-3.jpg",
+    "title": "Suzume no Tojimari Subtitle Indonesia",
+    "slug": "suzume-no-tojimari-subtitle-indonesia",
+    "status": "Completed",
+    "type": "Movie"
+  },
+  {...}
+}
+
+```
 
