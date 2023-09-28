@@ -62,9 +62,9 @@ tetapi kamu dapat menggunakan library lain diluar sana.
 
 ### Get Anime List
 
-| Parameter    | Description                                                                                                             |
-| ------------ | ----------------------------------------------------------------------------------------------------------------------- |
-| `page` (int) | secara default `page` value nya `1` dan ini akan mengahasilkan 50 daftar anime per `page` nya. Contoh:  `/anime?page=2` |
+| Parameter    | Description                                                                                                                 |
+| ------------ | --------------------------------------------------------------------------------------------------------------------------- |
+| `page` (int) | secara default `page` value nya `1` dan ini akan mengahasilkan 50 daftar anime per `page` nya.<br> Contoh:  `/anime?page=2` |
 
 
 
