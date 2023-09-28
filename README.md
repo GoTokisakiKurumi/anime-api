@@ -79,12 +79,19 @@ Hasilnya >>
 ```json
 [
   {
-    'image': 'https://sokuja.in/wp-content/uploads/2023/06/Eiyuu_Kyoushitsu-4.jpg',
-    'title': 'Eiyuu Kyoushitsu Subtitle Indonesia',
-    'slug': 'eiyuu-kyoushitsu-subtitle-indonesia',
-    'status': 'Completed',
-    'type': 'TV'
-  }
+    "image": "https://sokuja.in/wp-content/uploads/2022/09/fma3.jpeg",
+    "title": "Fullmetal Alchemist: Brotherhood Subtitle Indonesia",
+    "slug": "fullmetal-alchemist-brotherhood-subtitle-indonesia",
+    "status": "Completed",
+    "type": "TV"
+  },
+  {
+    "image": "https://sokuja.in/wp-content/uploads/2022/10/fumetsu-anata-e-sokuja.jpg.webp",
+    "title": "Fumetsu no Anata e Season 2 Subtitle Indonesia",
+    "slug": "fumetsu-no-anata-e-season-2-subtitle-indonesia",
+    "status": "Completed",
+    "type": "TV"
+  },
 ]
 
 ```
