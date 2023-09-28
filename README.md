@@ -169,7 +169,47 @@ Hasilnya >>
     "type": "Movie"
   },
   {...}
+]
+
+```
+### Get Anime List Ongoing
+
+ini akan mengambil semua daftar anime ongoing.
+
+Anime `ongoing` mengacu pada seri anime yang masih dalam proses produksi dan penayangan,
+ini berarti bahwa episode-episode baru dari anime tersebut terus dirilis secara berkala,
+dan ceritanya belum selesai.
+Oleh: `ChatGpt`
+
+
+```js
+async function main () {
+    const response = await fetch('http://localhost:3000/anime/ongoing')
+    const data = response.json()
+    console.log(data)
 }
+main()
+```
+Hasilnya >>
+
+```json
+[
+  {
+    "image": "https://sokuja.in/wp-content/uploads/2023/08/Seiken_Gakuin_no_Makentsukai-.jpg",
+    "title": "Seiken Gakuin no Makentsukai Subtitle Indonesia",
+    "slug": "seiken-gakuin-no-makentsukai-subtitle-indonesia",
+    "status": "Ongoing",
+    "type": "TV"
+  },
+  {
+    "image": "https://sokuja.in/wp-content/uploads/2023/07/sokuja-helck-sub-indo.jpg",
+    "title": "Helck Subtitle Indonesia",
+    "slug": "helck-subtitle-indonesia",
+    "status": "Ongoing",
+    "type": "TV"
+  },
+  {...}
+]
 
 ```
 
