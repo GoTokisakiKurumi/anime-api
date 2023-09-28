@@ -132,7 +132,7 @@ Hasilnya >>
       "title": "Black Clover Subtitle Indonesia",
       "slug": "black-clover-subtitle-indonesia"
     }
-  }, {...}
+  }
 ]
 
 ```
