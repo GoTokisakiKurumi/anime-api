@@ -83,8 +83,7 @@ Hasilnya >>
     slug: 'eiyuu-kyoushitsu-subtitle-indonesia',
     status: 'Completed',
     type: 'TV'
-  },
-    {...}, ...
+  }
 ]
 
 ```
