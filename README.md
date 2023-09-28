@@ -425,7 +425,7 @@ Hasilnya >>
 ### Get Anime Streaming Url
 
 route ini akan mengambil url video streaming berdasarkan `slug`, tapi perlu diingat `slug` disini yaitu `slug` yang bisa kamu dapatkan 
-diroute [detail](get-anime-details) atau kamu bisa menyebutnya sebagai `slug episode`<br>
+diroute [detail](#get-anime-details) atau kamu bisa menyebutnya sebagai `slug episode`<br>
 
 ```js
 async function main () {
