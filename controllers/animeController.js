@@ -163,8 +163,8 @@ export const fetchAnimeDetail = async (req, res) =>
 export const fetchAnimeUpdate = async (req, res) =>
 {
   try {
-    const params = req.params.number
-    const data = await scrapper.fetchAnimeUpdateData(params)
+    const page = req.query.page ?? 1
+    const data = await scrapper.fetchAnimeUpdateData(page)
     res.status(200).json(data)
   } catch (error) {
     res.status(500).json(error)

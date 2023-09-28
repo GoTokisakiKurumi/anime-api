@@ -34,7 +34,7 @@
   - [Get Anime List Ongoing](#get-anime-list-ongoing)
   - [Get Anime List Completed](#get-anime-list-completed)
   - [Get Anime Details](#get-anime-details)
-  - [Get Anime Update](#get-anime-update)
+  - [Get Anime List Update](#get-anime-list-update)
   - [Get Anime Schedule](#get-anime-schdule)
   - [Get Anime Upcoming](#get-anime-upcoming)
   - [Get Anime Streaming Url](#get-anime-streaming-url)
@@ -53,7 +53,7 @@ mulai server dengan perintah berikut:
 
 npm start
 ```
-Sekarang server sedang berjalan di http://localhost:3000
+Sekarang server sedang berjalan di http://localhost:3000.
 
 ## Routes
 
@@ -91,7 +91,7 @@ Hasilnya >>
 
 ### Get Anime List Mode
 
-ini akan mengambil daftar anime berdasarkan inisial huruf dari A sampai Z
+ini akan mengambil daftar anime berdasarkan inisial huruf dari A sampai Z.
 
 ```js
 async function main () {
@@ -140,7 +140,7 @@ Hasilnya >>
 ```
 ### Get Anime List Movies
 
-ini akan mengambil semua daftar anime movie
+ini akan mengambil semua daftar anime movie.
 
 ```js
 async function main () {
@@ -251,11 +251,11 @@ Hasilnya >>
 ```
 ### Get Anime Details
 
-ini akan mengambil detail dari anime dengan menggunakan `/anime/:slug`
+ini akan mengambil detail dari anime dengan menggunakan `/anime/detail/:slug`.
 
 ```js
 async function main () {
-    const response = await fetch('http://localhost:3000/anime/oshi-no-ko-subtitle-indonesia')
+    const response = await fetch('http://localhost:3000/anime/detail/oshi-no-ko-subtitle-indonesia')
     const data = response.json()
     console.log(data)
 }
@@ -299,4 +299,47 @@ Hasilnya >>
     ]
   }
 ]
+```
+### Get Anime List Update
+
+ini akan mengambil daftar episode anime terbaru yang sudah diupdate sesuai jadwal yang sudah ditentukan.
+
+| Parameter    | Description                                                                                                                               |
+| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `page` (int) | secara default `page` value nya `1` dan ini akan mengahasilkan 50 daftar anime update per `page` nya.<br> Contoh:  `/anime/update?page=2` |
+
+
+```js
+async function main () {
+    const response = await fetch('http://localhost:3000/anime/update?page=2')
+    const data = response.json()
+    console.log(data)
+}
+main()
+```
+Hasilnya >> 
+
+```json
+[
+  {
+    "image": "https://sokuja.in/wp-content/uploads/2023/06/Jitsu_wa_Ore_Saikyou_deshita-1.jpg",
+    "thumbnail": "https://sokuja.in/wp-content/uploads/2023/09/sokuja-jitsu-wa-eps-11-sub-indo.jpg",
+    "title": "Jitsu wa Ore, Saikyou deshita Episode 11 Subtitle Indonesia",
+    "slug": "jitsu-wa-ore-saikyou-deshita-episode-11-subtitle-indonesia",
+    "type": "TV",
+    "information": "Ongoing · 5 hari lalu",
+    "episode": "11/12"
+  },
+  {
+    "image": "https://sokuja.in/wp-content/uploads/2022/12/maou.gakuin.no_.futekigousha.season.2.jpg",
+    "thumbnail": "https://sokuja.in/wp-content/uploads/2023/09/sokuja-maou-gakuin-season-2-sub-indo-eps-12.jpg",
+    "title": "(END) Maou Gakuin no Futekigousha Season 2 Episode 12 Subtitle Indonesia",
+    "slug": "end-maou-gakuin-no-futekigousha-season-2-episode-12-subtitle-indonesia",
+    "type": "TV",
+    "information": "Completed · 5 hari lalu",
+    "episode": "12/12"
+  },
+  {...}
+]
+
 ```
