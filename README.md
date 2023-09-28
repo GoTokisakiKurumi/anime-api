@@ -343,3 +343,49 @@ Hasilnya >>
 ]
 
 ```
+### Get Anime Schedule
+
+ini akan mengambil daftar jadwal rilis anime episode terbaru.
+
+```js
+async function main () {
+    const response = await fetch('http://localhost:3000/anime/schedule')
+    const data = response.json()
+    console.log(data)
+}
+main()
+```
+Hasilnya >>
+
+```json
+[
+  {
+    "hours": "Kamis",
+    "list_anime": [
+      {
+        "image": "https://sokuja.in/wp-content/uploads/2023/06/Hataraku_Maou-sama-1.jpg",
+        "title": "Hataraku Maou-sama!! Season 2 Part 2 Subtitle Indonesia",
+        "slug": "hataraku-maou-sama-season-2-part-2-subtitle-indonesia",
+        "episode": "12",
+        "time": " 14:55"
+      },
+      {...}
+    ]
+  },
+  {
+    "hours": "Jumat",
+    "list_anime": [
+      {
+        "image": "https://sokuja.in/wp-content/uploads/2023/06/Nanatsu_no_Maken_ga_Shihai_suru-3.jpg",
+        "title": "Nanatsu no Maken ga Shihai suru Subtitle Indonesia",
+        "slug": "nanatsu-no-maken-ga-shihai-suru-subtitle-indonesia",
+        "episode": "13",
+        "time": " 16:54"
+      },
+      {...}
+    ]
+  }, {...}
+]
+
+```
+
