@@ -179,6 +179,7 @@ ini akan mengambil semua daftar anime ongoing.
 Anime `ongoing` mengacu pada seri anime yang masih dalam proses produksi dan penayangan,
 ini berarti bahwa episode-episode baru dari anime tersebut terus dirilis secara berkala,
 dan ceritanya belum selesai.
+<br>
 Oleh: `ChatGpt`
 
 
