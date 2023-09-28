@@ -79,10 +79,10 @@ Hasilnya >>
 ```json
 [
   {
-    image: 'https://sokuja.in/wp-content/uploads/2023/06/Eiyuu_Kyoushitsu-4.jpg',                                         title: 'Eiyuu Kyoushitsu Subtitle Indonesia',
-    slug: 'eiyuu-kyoushitsu-subtitle-indonesia',
-    status: 'Completed',
-    type: 'TV'
+    'image': 'https://sokuja.in/wp-content/uploads/2023/06/Eiyuu_Kyoushitsu-4.jpg',                                         title: 'Eiyuu Kyoushitsu Subtitle Indonesia',
+    'slug': 'eiyuu-kyoushitsu-subtitle-indonesia',
+    'status': 'Completed',
+    'type': 'TV'
   }
 ]
 
