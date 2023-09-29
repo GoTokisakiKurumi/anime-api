@@ -1,4 +1,4 @@
-import scrapper from "../utils/scrapper.js"
+const scrapper = require("../utils/scrapper.js");
 
 /**
  *
@@ -6,10 +6,10 @@ import scrapper from "../utils/scrapper.js"
  * @description menampilkan text ke web 
  * @returns void 
  */
-export const home = async (req, res) =>
+const home = async (req, res) =>
 {
-  res.status(200).send('Anime API is ready 🚀')
-}
+  res.status(200).send('Anime API is ready 🚀');
+};
 
 /**
  *
@@ -20,19 +20,19 @@ export const home = async (req, res) =>
  *    module scrapper
  * @returns void 
  */
-export const fetchAnimeList = async (req, res) =>
+const fetchAnimeList = async (req, res) =>
 {
   try {
-    const page = req.query.page ?? 1
+    const page = req.query.page ?? 1;
     const data = await scrapper.fetchAnimeListData({
       url: '/anime/',
       params: `?page=${page}`
-    })
-    res.status(200).json(data)
+    });
+    res.status(200).json(data);
   } catch (error) {
-    res.status(500).json(error)
+    res.status(500).json(error);
   }
-}
+};
 
 /**
  *
@@ -43,15 +43,15 @@ export const fetchAnimeList = async (req, res) =>
  *    module scrapper
  * @returns void 
  */
-export const fetchAnimeListMode = async (req, res) =>
+const fetchAnimeListMode = async (req, res) =>
 {
   try {
-    const data = await scrapper.fetchAnimeListModeData()
-    res.status(200).json(data)
+    const data = await scrapper.fetchAnimeListModeData();
+    res.status(200).json(data);
   } catch (error) {
-    res.status(500).json(error)
+    res.status(500).json(error);
   }
-}
+};
 
 /**
  *
@@ -65,18 +65,18 @@ export const fetchAnimeListMode = async (req, res) =>
  *    module scrapper
  * @returns void 
  */
-export const fetchAnimeMovie = async (req, res) =>
+const fetchAnimeMovie = async (req, res) =>
 {
   try {
     const data = await scrapper.fetchAnimeListData({
       url: '/anime/',
       params: '?type=movie&order=update'
-    })
-    res.status(200).json(data)
+    });
+    res.status(200).json(data);
   } catch (error) {
-    res.status(500).json(error)
+    res.status(500).json(error);
   }
-}
+};
 
 /**
  *
@@ -90,18 +90,18 @@ export const fetchAnimeMovie = async (req, res) =>
  *    module scrapper
  * @returns void 
  */
-export const fetchAnimeOngoing = async (req, res) =>
+const fetchAnimeOngoing = async (req, res) =>
 {
   try {
     const data = await scrapper.fetchAnimeListData({
       url: '/anime/',
       params: '?status=ongoing&order=update'
-    })
-    res.status(200).json(data)
+    });
+    res.status(200).json(data);
   } catch (error) {
-    res.status(500).json(error)
+    res.status(500).json(error);
   }
-}
+};
 
 /**
  *
@@ -115,20 +115,19 @@ export const fetchAnimeOngoing = async (req, res) =>
  *    module scrapper
  * @returns void 
  */
-export const fetchAnimeCompleted = async (req, res) =>
+const fetchAnimeCompleted = async (req, res) =>
 {
   try {
-    const page = req.query.page ?? 1
+    const page = req.query.page ?? 1;
     const data = await scrapper.fetchAnimeListData({
       url: '/anime/',
       params: `?page=${page}&status=completed&order=update`
-    })
-    res.status(200).json(data)
+    });
+    res.status(200).json(data);
   } catch (error) {
-    res.status(500).json(error)
+    res.status(500).json(error);
   }
-}
-
+};
 
 /**
  *
@@ -139,16 +138,16 @@ export const fetchAnimeCompleted = async (req, res) =>
  *    module scrapper
  * @returns void 
  */
-export const fetchAnimeDetail = async (req, res) =>
+const fetchAnimeDetail = async (req, res) =>
 {
   try {
-    const params = req.params.slug
-    const data = await scrapper.fetchAnimeDetailData(params)
-    res.status(200).json(data)
+    const params = req.params.slug;
+    const data = await scrapper.fetchAnimeDetailData(params);
+    res.status(200).json(data);
   } catch (error) {
-    res.status(500).json(error)
+    res.status(500).json(error);
   }
-}
+};
 
 /**
  *
@@ -159,17 +158,17 @@ export const fetchAnimeDetail = async (req, res) =>
  *    module scrapper
  * @returns void 
  */
-export const fetchAnimeUpdate = async (req, res) =>
+const fetchAnimeUpdate = async (req, res) =>
 {
   try {
-    const page = req.query.page ?? 1
-    const data = await scrapper.fetchAnimeUpdateData(page)
-    console.log(data.length)
-    res.status(200).json(data)
+    const page = req.query.page ?? 1;
+    const data = await scrapper.fetchAnimeUpdateData(page);
+    console.log(data.length);
+    res.status(200).json(data);
   } catch (error) {
-    res.status(500).json(error)
+    res.status(500).json(error);
   }
-}
+};
 
 /**
  *
@@ -180,15 +179,15 @@ export const fetchAnimeUpdate = async (req, res) =>
  *    module scrapper
  * @returns void 
  */
-export const fetchAnimeSchedule = async (req, res) =>
+const fetchAnimeSchedule = async (req, res) =>
 {
   try {
-    const data = await scrapper.fetchAnimeScheduleData()
-    res.status(200).json(data)
+    const data = await scrapper.fetchAnimeScheduleData();
+    res.status(200).json(data);
   } catch (error) {
-    res.status(500).json(error)
+    res.status(500).json(error);
   }
-}
+};
 
 /**
  *
@@ -200,16 +199,16 @@ export const fetchAnimeSchedule = async (req, res) =>
  *    module scrapper
  * @returns void 
  */
-export const fetchAnimeUpcoming = async (req, res) =>
+const fetchAnimeUpcoming = async (req, res) =>
 {
   try {
-    const page = req.query.page ?? 1
-    const data = await scrapper.fetchAnimeUpcomingData(page)
-    res.status(200).json(data)
+    const page = req.query.page ?? 1;
+    const data = await scrapper.fetchAnimeUpcomingData(page);
+    res.status(200).json(data);
   } catch (error) {
-    res.status(500).json(error)
+    res.status(500).json(error);
   }
-}
+};
 
 /**
  *
@@ -220,13 +219,27 @@ export const fetchAnimeUpcoming = async (req, res) =>
  *    module scrapper
  * @returns void 
  */
-export const fetchVideoPlayer = async (req, res) =>
+const fetchVideoPlayer = async (req, res) =>
 {
   try {
-    const params = req.params.slug
-    const data = await scrapper.fetchVideoPlayerData(params)
-    res.status(200).json(data)
+    const params = req.params.slug;
+    const data = await scrapper.fetchVideoPlayerData(params);
+    res.status(200).json(data);
   } catch (error) {
-    res.status(500).json(error)
+    res.status(500).json(error);
   }
-}
+};
+
+module.exports = {
+  home,
+  fetchAnimeList,
+  fetchAnimeListMode,
+  fetchAnimeMovie,
+  fetchAnimeOngoing,
+  fetchAnimeCompleted,
+  fetchAnimeDetail,
+  fetchAnimeUpdate,
+  fetchAnimeSchedule,
+  fetchAnimeUpcoming,
+  fetchVideoPlayer
+};
