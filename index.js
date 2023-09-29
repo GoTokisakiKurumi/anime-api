@@ -1,8 +1,8 @@
-import express from 'express';
-import animeRoutes from './routes/animeRoutes.js'
+const express = require('express');
+const animeRoutes = require('./routes/animeRoutes.js');
 
-const app = express()
+const app = express();
 
-app.use(animeRoutes)
+app.use(animeRoutes);
 
-app.listen(3000, () => console.log('Anime API on ready 🚀'))
+app.listen(3000, () => console.log('Anime API on ready 🚀'));
