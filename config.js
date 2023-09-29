@@ -1,3 +1,3 @@
 export default {
-  'BASE_URL' : 'https://sokuja.bar'
+  'BASE_URL' : 'https://sokuja.in'
 }
