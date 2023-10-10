@@ -1,30 +1,18 @@
-import express from 'express'
-import { 
-  home,
-  fetchAnimeList,
-  fetchAnimeListMode,
-  fetchAnimeMovie,
-  fetchAnimeOngoing,
-  fetchAnimeCompleted,
-  fetchAnimeDetail,
-  fetchAnimeUpdate,
-  fetchAnimeSchedule,
-  fetchAnimeUpcoming,
-  fetchVideoPlayer,
-} from '../controllers/animeController.js'
+const express = require('express');
+const animeController = require('../controllers/animeController.js');
 
-const router = express.Router()
+const router = express.Router();
 
-router.get('/', home)
-router.get('/anime', fetchAnimeList)
-router.get('/anime/list-mode', fetchAnimeListMode)
-router.get('/anime/movie', fetchAnimeMovie)
-router.get('/anime/ongoing', fetchAnimeOngoing)
-router.get('/anime/completed', fetchAnimeCompleted)
-router.get('/anime/detail/:slug', fetchAnimeDetail)
-router.get('/anime/update', fetchAnimeUpdate)
-router.get('/anime/schedule', fetchAnimeSchedule)
-router.get('/anime/upcoming', fetchAnimeUpcoming)
-router.get('/anime/video/:slug', fetchVideoPlayer)
+router.get('/', animeController.home);
+router.get('/anime', animeController.fetchAnimeList);
+router.get('/anime/list-mode', animeController.fetchAnimeListMode);
+router.get('/anime/movie', animeController.fetchAnimeMovie);
+router.get('/anime/ongoing', animeController.fetchAnimeOngoing);
+router.get('/anime/completed', animeController.fetchAnimeCompleted);
+router.get('/anime/detail/:slug', animeController.fetchAnimeDetail);
+router.get('/anime/update', animeController.fetchAnimeUpdate);
+router.get('/anime/schedule', animeController.fetchAnimeSchedule);
+router.get('/anime/upcoming', animeController.fetchAnimeUpcoming);
+router.get('/anime/video/:slug', animeController.fetchVideoPlayer);
 
-export default router
+module.exports = router;
